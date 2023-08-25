@@ -25,7 +25,7 @@ export default function RootLayout({
             <div className="w-full h-[50px] text-white sticky top-3">
               <Navbar />
             </div>
-            <div className="w-[calc(100dvh)] min-h-[calc(100dvh)] ">{children}</div>
+            <div className="min-w-[calc(100dvh)] min-h-[calc(100dvh)] ">{children}</div>
           </div>
           </LinkProvider>
           </body>
