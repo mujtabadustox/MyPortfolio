@@ -3,6 +3,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import {LinkProvider} from '@/contexts/LinkProvider/LinkProvider'
 
+import Head from 'next/head'
+
+
 import Navbar from '@/components/navbar/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,13 +22,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+      </Head>
       <body className={inter.className}>
         <LinkProvider>
         <div className="mx-auto max-w-[calc(100dvw - 80px)] min-h-[calc(100dvh)] flex-row bg-black px-[40px] py-[10px]">
             <div className="w-full h-[50px] text-white sticky top-3">
               <Navbar />
             </div>
-            <div className="min-w-[calc(100dvh)] min-h-[calc(100dvh)] ">{children}</div>
+            <div className="sm:max-w-[calc(100dvw)] min-w-[calc(100dvw)] min-h-[calc(100dvh)] ">{children}</div>
           </div>
           </LinkProvider>
           </body>
