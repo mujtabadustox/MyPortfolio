@@ -21,11 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <LinkProvider>
-        <div className="mx-auto max-w-[calc(100vw - 80px)] min-h-screen flex-row bg-black px-[40px] py-[10px]">
+        <div className="mx-auto max-w-[calc(100vw - 80px)] min-h-[calc(100dvh)] flex-row bg-black px-[40px] py-[10px]">
             <div className="w-full h-[50px] text-white sticky top-3">
               <Navbar />
             </div>
-            <div className="w-full min-h-screen ">{children}</div>
+            <div className="w-full min-h-[calc(100dvh)] ">{children}</div>
           </div>
           </LinkProvider>
           </body>

@@ -10,6 +10,7 @@ import Image from 'next/image'
 
 
 
+
 const Home = () => {
   const { link, setLink } = useLinkContext();
 
@@ -29,7 +30,7 @@ const Home = () => {
     <div className="flex flex-col items-center">
 
 <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("home")}>
-                  <div id='home' className='w-[800px] h-screen py-[60px]'>
+                  <div id='home' className='w-[800px] h-[calc(100dvh)] py-[60px]'>
         <div className='flex pt-[100px]'>
           <div className='pt-[15px]'>
       <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
@@ -87,7 +88,7 @@ const Home = () => {
       <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("skills")} onLeave={(props) => {
 console.log("skills" , props)
 }}>
-      <div  id='skills' className='w-[800px] h-screen py-[60px]'>
+      <div  id='skills' className='w-[800px] h-[calc(100dvh)] py-[60px]'>
         <div className='pt-[60px]'>
         <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
       <p className='text-[#949494] pb-5 text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
@@ -100,7 +101,7 @@ console.log("skills" , props)
       <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("projects")} onLeave={(props) => {
 console.log("proj" , props)
 }}>
-      <div id="projects" className='w-[800px] h-screen py-[60px]'>
+      <div id="projects" className='w-[800px] h-[calc(100dvh)] py-[60px]'>
         <div className='pt-[60px]'>
       <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
       <p className='text-[#949494] pb-5 text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
@@ -112,7 +113,7 @@ console.log("proj" , props)
       
 
       <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("resume")}>
-      <div id="resume" className='w-[800px] h-screen py-[60px]'>
+      <div id="resume" className='w-[800px] h-[calc(100dvh)] py-[60px]'>
         <div className='pt-[60px]'>
       <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
       <p className='text-[#949494] pb-5 text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
@@ -121,6 +122,7 @@ console.log("proj" , props)
       </div>
       </div>
       </Waypoint>
+
 
 
       

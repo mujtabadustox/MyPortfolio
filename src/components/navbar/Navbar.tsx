@@ -6,6 +6,7 @@ import Greetings from "../greetings/Greetings";
 import {useLinkContext} from '@/contexts/LinkProvider/LinkProvider'
 
 
+
 const Navbar = () => {
 
     const data = ['Hello','Salam','Namaste','Bonjour','Hallo']
@@ -69,6 +70,7 @@ const Navbar = () => {
         Resume
       </Link>
       </div>
+  
 
       <div className="flex mx-5 my-2.5 min-w-[140px] max-w-[140px]">
         <Greetings data={data}/>
