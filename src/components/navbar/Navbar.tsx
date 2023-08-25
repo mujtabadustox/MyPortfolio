@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
 import Greetings from "../greetings/Greetings";
 import {useLinkContext} from '@/contexts/LinkProvider/LinkProvider'
 
@@ -14,6 +14,7 @@ const Navbar = () => {
     const span1 = "<"
     const span2 = " />"
     const { link, setLink } = useLinkContext();
+    const [isOpen, setIsOpen] = useState(false);
 
     const scrollToSection = (id : string) => {
         const element = document.getElementById(id);
@@ -27,12 +28,40 @@ const Navbar = () => {
       };
 
   return (
-    <div className="flex justify-between w-100 ">
-      <Link href="/" className="font-bold text-[20px] mx-5 my-2.5 text-white">
+
+
+    <nav className="flex items-center justify-between flex-wrap px-6 w-100">
+    <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
+    <Link href="/" className="font-bold text-[20px] md:mx-5 md:my-2.5 text-white">
         <span className="font-bold text-[20px] text-purple-700">{span1}</span>{myName}<span className="font-bold text-[20px] text-purple-700">{span2}</span>
       </Link>
+    </div>
+    <div className="block lg:hidden">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+      >
+        <svg
+          className={`fill-current h-3 w-3 ${isOpen ? "hidden" : "block"}`}
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+        <svg
+          className={`fill-current h-3 w-3 ${isOpen ? "block" : "hidden"}`}
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+        </svg>
+      </button>
+    </div>
+    <div
+      className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
+    >
 
-      <div className="mx-5 my-2.5 space-x-5">
+<div className="mx-5 my-2.5 space-x-5">
 <Link href="#home" className={`font-bold text-[20px] text-white hover:border-white border-b-4 transition border-transparent ${
     link === "home" ? "border-purple-700" : "border-transparent"
   }`} onClick={(e) => {
@@ -72,11 +101,18 @@ const Navbar = () => {
       </div>
   
 
-      <div className="flex mx-5 my-2.5 min-w-[140px] max-w-[140px]">
+     
+    </div>
+
+    <div className="flex mx-5 my-2.5 min-w-[140px] max-w-[140px]">
         <Greetings data={data}/>
        
       </div>
-    </div>
+
+  
+    
+  </nav>
+
   );
 };
 
