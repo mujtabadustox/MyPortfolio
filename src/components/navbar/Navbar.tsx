@@ -61,7 +61,7 @@ const Navbar = () => {
       className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
     >
 
-<div className="mx-5 my-2.5 space-x-5">
+<div className="md:pt-0 pt-9 mx-5 my-2.5 space-x-5">
 <Link href="#home" className={`font-bold text-[20px] text-white hover:border-white border-b-4 transition border-transparent ${
     link === "home" ? "border-purple-700" : "border-transparent"
   }`} onClick={(e) => {

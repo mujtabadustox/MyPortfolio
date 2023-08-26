@@ -30,20 +30,20 @@ const Home = () => {
     <div className="flex flex-col items-center">
 
 <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("home")}>
-                  <div id='home' className='w-[800px] h-[calc(100dvh)] py-[60px]'>
+                  <div id='home' className='w-fit md:w-[800px] p-2 md:p-0 h-[calc(100dvh)] py-[60px]'>
         <div className='flex pt-[100px]'>
           <div className='pt-[15px]'>
-      <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
-      <p className='text-[#949494] pb-5 text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
+      <p className='text-[#949494] pb-5 text-2xl md:text-3xl'>hi, my name is <span className='text-white text-2xl md:text-3xl'>mujtaba ali</span>.</p>
+      <p className='text-[#949494] pb-5 text-2xl md:text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-2xl md:text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
       <p className='text-white pb-5 text-sm'>based in Islamabad, Pakistan</p>
-      <button className='border rounded-full py-1 px-3 bg-[#121212] text-white text-md'>
+      <button className='border rounded-full mb-2 py-1 px-3 bg-[#121212] text-white text-md'>
       <a href="mailto:mujtabazoroark@gmail.com" target="_blank">Email Me</a>
       </button>
       </div>
-      <div className="flex flex-grow justify-end items-center">
-    <Image className="border h-[300px] w-[300px] bg-white" alt="my-image" width={300} height={300} src="/images/1.png"/>
-    <div className="absolute pt-[290px]">
-        <div className="w-[240px] h-[140px] bg-black transform rotate-45"></div>
+      <div className={`flex flex-grow justify-end items-center hide-on-mobile`}>
+    <Image className={`border h-[300px] w-[300px] bg-white hide-on-mobile`} alt="my-image" width={300} height={300} src="/images/1.png"/>
+    <div className={`absolute pt-[290px] hide-on-mobile`}>
+        <div className={`w-[240px] h-[140px] bg-black transform rotate-45 hide-on-mobile`}></div>
       </div>
   </div>
       </div>
