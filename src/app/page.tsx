@@ -88,7 +88,7 @@ const Home = () => {
       <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("skills")} onLeave={(props) => {
 console.log("skills" , props)
 }}>
-      <div  id='skills' className='w-[800px] h-[calc(100dvh)] py-[60px]'>
+      <div  id='skills' className='w-fit md:w-[800px] p-2 md:p-0 h-[calc(100dvh)] py-[60px]'>
         <div className='pt-[60px]'>
         <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
       <p className='text-[#949494] pb-5 text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
@@ -101,7 +101,7 @@ console.log("skills" , props)
       <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("projects")} onLeave={(props) => {
 console.log("proj" , props)
 }}>
-      <div id="projects" className='w-[800px] h-[calc(100dvh)] py-[60px]'>
+      <div id="projects" className='w-fit md:w-[800px] p-2 md:p-0 h-[calc(100dvh)] py-[60px]'>
         <div className='pt-[60px]'>
       <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
       <p className='text-[#949494] pb-5 text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
@@ -113,7 +113,7 @@ console.log("proj" , props)
       
 
       <Waypoint topOffset="100px" bottomOffset="100px" onEnter={() => handleEnter("resume")}>
-      <div id="resume" className='w-[800px] h-[calc(100dvh)] py-[60px]'>
+      <div id="resume" className='w-fit md:w-[800px] p-2 md:p-0 h-[calc(100dvh)] py-[60px]'>
         <div className='pt-[60px]'>
       <p className='text-[#949494] pb-5 text-3xl'>hi, my name is <span className='text-white text-3xl'>mujtaba ali</span>.</p>
       <p className='text-[#949494] pb-5 text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-3xl'>websites</span> and <span className='text-white text-3xl'>apps!</span></p>
