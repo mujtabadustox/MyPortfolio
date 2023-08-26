@@ -27,7 +27,7 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <LinkProvider>
-        <div className="mx-auto min-w-[calc(100dvw)] min-h-[calc(100dvh)] flex-row bg-black py-[10px]">
+        <div className="mx-auto sm:w-full min-w-[calc(100dvw)] min-h-[calc(100dvh)] flex-row bg-black py-[10px]">
             <div className="w-full h-[50px] text-white sticky top-3">
               <Navbar />
             </div>
