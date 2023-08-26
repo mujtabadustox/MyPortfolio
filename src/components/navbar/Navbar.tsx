@@ -104,7 +104,7 @@ const Navbar = () => {
      
     </div>
 
-    <div className="flex mx-5 my-2.5 min-w-[140px] max-w-[140px]">
+    <div className={`flex mx-5 my-2.5 min-w-[140px] max-w-[140px] hide-on-mobile`}>
         <Greetings data={data}/>
        
       </div>

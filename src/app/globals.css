@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+@media (max-width: 640px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
 .cursor {
   width: 600px;
   animation: typing .5s, blink .5s infinite alternate;
