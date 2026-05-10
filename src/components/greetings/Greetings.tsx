@@ -52,6 +52,7 @@ interface GreetingsProps {
       }
     }, delay);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[printNext])
 
 
