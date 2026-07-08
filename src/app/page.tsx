@@ -234,7 +234,7 @@ const Home = () => {
 
             <div className='flex flex-wrap gap-3'>
               <a
-                href="https://docs.google.com/document/d/1pup5yAEkU2g6opYm5R9Etus6MhJz0ThHGYkuqjw9Mgc/edit?tab=t.0"
+                href="https://docs.google.com/document/d/1mFB2Irzg7imRpskP3XQjzL-8OkPVlf_b8yvhXDp79oA/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className='border border-[#3d3d3d] rounded-full py-1.5 px-5 bg-[#121212] text-white text-sm hover:border-purple-700 transition-colors duration-200'
