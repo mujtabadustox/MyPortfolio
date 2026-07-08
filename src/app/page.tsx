@@ -4,6 +4,10 @@ import React from 'react'
 import { Waypoint } from 'react-waypoint'
 import { useLinkContext } from '@/contexts/LinkProvider/LinkProvider'
 import Image from 'next/image'
+import { Caveat } from 'next/font/google'
+import { SiNextdotjs, SiTailwindcss, SiSanity, SiWhatsapp } from 'react-icons/si'
+
+const caveat = Caveat({ subsets: ['latin'], weight: ['600', '700'] })
 
 const skillGroups = [
   {
@@ -112,6 +116,102 @@ const ExternalLinkIcon = () => (
   </svg>
 )
 
+const ResumeIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 3v13m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+const HandDrawnArrow = () => (
+  <svg className="mr-6" width="46" height="86" viewBox="0 0 46 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M36 6C44 24 40 42 22 51C10 57 6 64 11 75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path d="M3 66L11 75L20 65" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+const FloatingCredits = () => (
+  <div
+    className={`hidden xl:flex flex-col fixed top-44 right-16 z-30 select-none pointer-events-none text-[#5a5a5a] ${caveat.className}`}
+  >
+    <span className="self-end -rotate-6 text-3xl pr-1">made with</span>
+    <HandDrawnArrow />
+    <div className="flex flex-col gap-4 -mt-1">
+      <div className="flex items-center gap-2 -rotate-3">
+        <SiNextdotjs size={20} className="text-white/80" />
+        <span className="text-2xl">Next.js</span>
+      </div>
+      <div className="flex items-center gap-2 rotate-2 ml-4">
+        <SiTailwindcss size={20} className="text-sky-400" />
+        <span className="text-2xl">Tailwind</span>
+      </div>
+      <div className="flex items-center gap-2 -rotate-2 ml-1">
+        <SiSanity size={20} className="text-red-500" />
+        <span className="text-2xl">Sanity</span>
+      </div>
+    </div>
+  </div>
+)
+
+const WhatsAppArrow = () => (
+  <svg className="self-end mr-2" width="56" height="54" viewBox="0 0 56 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 4C14 16 10 28 24 34C34 38 40 36 46 42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path d="M36 44L46 42L42 33" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+const FloatingWhatsApp = () => (
+  <>
+    <div
+      className={`hidden md:flex flex-col items-end fixed bottom-24 right-16 z-40 select-none pointer-events-none text-[#5a5a5a] ${caveat.className}`}
+    >
+      <span className="text-2xl rotate-3 pr-1">whatsapp me</span>
+      <WhatsAppArrow />
+    </div>
+    <a
+      href="https://wa.me/923312523510"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      className="fixed bottom-6 right-6 z-40 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_0_18px_-2px_rgba(37,211,102,0.7)] hover:scale-110 hover:shadow-[0_0_26px_-2px_rgba(37,211,102,0.9)] transition-all duration-300"
+    >
+      <SiWhatsapp size={26} />
+    </a>
+  </>
+)
+
+const SisyphusArrow = () => (
+  <svg className="self-center" width="60" height="44" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 8C20 4 38 12 50 26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path d="M40 22L50 26L47 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+const SisyphusLabel = () => (
+  <div
+    className={`hidden lg:flex flex-col items-start absolute -top-24 left-2 z-20 select-none pointer-events-none text-[#5a5a5a] ${caveat.className}`}
+  >
+    <span className="text-2xl -rotate-2">sisyphus</span>
+    <span className="text-lg -rotate-2 -mt-1 pl-2">(literally me)</span>
+    <SisyphusArrow />
+  </div>
+)
+
+const HeroSectionArrow = () => (
+  <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 4C10 18 22 24 44 26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path d="M34 20L44 26L36 33" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+const HeroSectionLabel = () => (
+  <div
+    className={`hidden lg:flex flex-col items-start absolute top-[31%] left-[26%] z-20 select-none pointer-events-none text-[#5a5a5a] ${caveat.className}`}
+  >
+    <span className="text-2xl -rotate-3">hero section</span>
+    <HeroSectionArrow />
+  </div>
+)
+
 const Section = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
   <div className={`w-full max-w-[820px] mx-auto px-5 md:px-8 ${className}`}>
     {children}
@@ -125,23 +225,48 @@ const Home = () => {
     setLink(id)
   }
 
+  const scrollToResume = () => {
+    const element = document.getElementById('resume')
+    if (element) {
+      const top = element.getBoundingClientRect().top + window.scrollY - 50
+      window.scrollTo({ top, behavior: 'smooth' })
+      setLink('resume')
+    }
+  }
+
   return (
     <div className="flex flex-col items-center w-full">
+      <FloatingCredits />
+      <FloatingWhatsApp />
 
       {/* HOME */}
       <Waypoint topOffset="60px" bottomOffset="60px" onEnter={() => handleEnter("home")}>
-        <div id='home' className='w-fit md:w-[800px] p-2 md:p-0 h-[calc(100dvh)] py-[60px] flex flex-col justify-center items-center'>
-          <div className='flex flex-col gap-2'>
+        <div id='home' className='relative z-0 w-full h-[calc(100dvh)] py-[60px] flex flex-col justify-center items-center'>
+          <HeroSectionLabel />
+          <div className='relative z-10 w-fit md:w-[800px] p-2 md:p-0 flex flex-col gap-2'>
             <div className='flex'>
          <div className='pt-[15px]'>
               <p className='text-[#949494] pb-5 text-2xl md:text-3xl'>hi, my name is <span className='text-white text-2xl md:text-3xl'>mujtaba ali</span>.</p>
               <p className='text-[#949494] pb-5 text-2xl md:text-3xl'>I am a computer science graduate and a software engineer, I create <span className='text-white text-2xl md:text-3xl'>websites</span> and <span className='text-white text-3xl'>apps</span><span className='text-purple-700 text-3xl'>!</span></p>
               <p className='text-white pb-5 text-sm'>based in Islamabad, Pakistan</p>
-              <button className='border border-purple-700 rounded-full mb-2 py-1 px-3 bg-[#121212] text-white text-md'>
-                <a href="mailto:mujtabazoroark@gmail.com" target="_blank">Email Me</a>
-              </button>
+              <div className='flex items-center gap-3 mb-2'>
+                <button className='border border-purple-700 rounded-full py-1 px-3 bg-[#121212] text-white text-md'>
+                  <a href="mailto:mujtabazoroark@gmail.com" target="_blank">Email Me</a>
+                </button>
+        
+                      <a
+                href="https://docs.google.com/document/d/1mFB2Irzg7imRpskP3XQjzL-8OkPVlf_b8yvhXDp79oA/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                  className='flex items-center gap-1.5 rounded-full py-1 px-4 text-md font-medium text-white bg-gradient-to-r from-purple-700 to-fuchsia-600 shadow-[0_0_15px_-3px_rgba(168,85,247,0.6)] hover:shadow-[0_0_22px_-2px_rgba(168,85,247,0.9)] hover:scale-105 transition-all duration-300'
+              >
+                Resume ↗
+              </a>
+               
+              </div>
             </div>
-            <div className={`flex flex-grow justify-end items-center hide-on-mobile`}>
+            <div className={`relative flex flex-grow justify-end items-center hide-on-mobile`}>
+              <SisyphusLabel />
               <Image className={`border h-[300px] w-[300px] bg-white hide-on-mobile`} alt="my-image" width={300} height={300} src="/images/1.png" />
               <div className={`absolute pt-[290px] hide-on-mobile`}>
                 <div className={`w-[240px] h-[140px] bg-black transform rotate-45 hide-on-mobile`}></div>
